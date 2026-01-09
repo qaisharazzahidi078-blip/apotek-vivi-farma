@@ -1,0 +1,111 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sehat bersama - Apotek Modern Terpercaya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #333; overflow-x: hidden; animation: fadeIn 1s ease-in; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        header { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%, #fecfef 100%); color: white; text-align: center; padding: 80px 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); position: relative; overflow: hidden; }
+        header::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://via.placeholder.com/1920x600?text=Medical+Background') no-repeat center/cover; opacity: 0.1; z-index: -1; }
+        header h1 { margin: 0; font-size: 3.5em; text-shadow: 3px 3px 6px rgba(0,0,0,0.4); animation: slideIn 1s ease-out; }
+        header p { font-size: 1.4em; margin: 15px 0; font-weight: 300; }
+        @keyframes slideIn { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        nav { background: rgba(255,255,255,0.95); color: #333; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 100; backdrop-filter: blur(15px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        nav a { color: #667eea; margin: 0 30px; text-decoration: none; font-weight: 600; transition: all 0.3s; padding: 10px 20px; border-radius: 30px; position: relative; }
+        nav a::after { content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 3px; background: #667eea; transition: all 0.3s; transform: translateX(-50%); }
+        nav a:hover::after { width: 100%; }
+        nav a:hover { background: #667eea; color: white; transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); }
+        section { padding: 60px 20px; max-width: 1500px; margin: auto; }
+        #home { background: rgba(255,255,255,0.95); border-radius: 25px; padding: 40px; margin-bottom: 40px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); backdrop-filter: blur(15px); animation: bounceIn 1s ease-out; }
+        @keyframes bounceIn { 0% { transform: scale(0.3); opacity: 0; } 50% { transform: scale(1.05); } 70% { transform: scale(0.9); } 100% { transform: scale(1); opacity: 1; } }
+        #products { background: rgba(255,255,255,0.95); border-radius: 25px; padding: 40px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); backdrop-filter: blur(15px); }
+        .search-bar { margin-bottom: 40px; text-align: center; }
+        .search-bar input { padding: 15px; width: 350px; border-radius: 50px; border: 2px solid #667eea; outline: none; font-size: 1.1em; transition: all 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .search-bar input:focus { width: 400px; border-color: #764ba2; box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+        .search-bar button { padding: 15px 25px; background: linear-gradient(135deg, #667eea, #764ba2); color: white; border: none; border-radius: 50px; cursor: pointer; margin-left: 15px; font-weight: 600; transition: all 0.3s; box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .search-bar button:hover { transform: scale(1.1); box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .product { border: 2px solid #e0e0e0; padding: 30px; background: #fff; border-radius: 20px; text-align: center; transition: all 0.4s ease; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; overflow: hidden; }
+        .product::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(102,126,234,0.1), transparent); transition: left 0.5s; }
+        .product:hover::before { left: 100%; }
+        .product:hover { transform: translateY(-15px) rotate(2deg); box-shadow: 0 20px 50px rgba(0,0,0,0.2); border-color: #667eea; }
+        .product img { width: 100%; height: 200px; object-fit: cover; border-radius: 15px; margin-bottom: 20px; transition: transform 0.3s; }
+        .product img:hover { transform: scale(1.1); }
+        .product h3 { color: #667eea; margin: 20px 0; font-size: 1.4em; }
+        .product p { margin: 10px 0; font-size: 1em; }
+        button { background: linear-gradient(135deg, #28a745, #20c997); color: white; border: none; padding: 15px 25px; border-radius: 50px; cursor: pointer; transition: all 0.3s; font-weight: 600; box-shadow: 0 5px 15px rgba(0,0,0,0.2); position: relative; overflow: hidden; }
+        button::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: left 0.5s; }
+        button:hover::before { left: 100%; }
+        button:hover { transform: scale(1.1); box-shadow: 0 10px 25px rgba(0,0,0,0.3); }
+        #contact { background: rgba(255,255,255,0.95); border-radius: 25px; padding: 40px; box-shadow: 0 15px 50px rgba(0,0,0,0.1); backdrop-filter: blur(15px); }
+        footer { background: rgba(0,0,0,0.95); color: white; text-align: center; padding: 40px; margin-top: 40px; backdrop-filter: blur(15px); }
+        footer i { margin: 0 10px; transition: color 0.3s; }
+        footer i:hover { color: #667eea; }
+        @media (max-width: 768px) { .products-grid { grid-template-columns: 1fr; } nav a { margin: 0 15px; } .search-bar input { width: 250px; } .search-bar input:focus { width: 300px; } }
+    </style>
+</head>
+<body>
+    <!-- Iframe YouTube untuk autoplay lagu saat halaman dibuka (tanpa mute agar terdengar, tapi mungkin diblokir browser) -->
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/vDSUmX2zOGk?autoplay=1&loop=1&playlist=vDSUmX2zOGk&controls=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen style="position: absolute; top: -9999px; left: -9999px;"></iframe>
+
+    <header>
+        <h1><i class="fas fa-pills"></i> vivi farma </h1>
+        <p>Apotek Modern Terpercaya - Lebih dari 99+ Produk Kesehatan Berkualitas Tinggi</p>
+    </header>
+    <nav>
+        <a href="#home"><i class="fas fa-home"></i> Beranda</a>
+        <a href="#products"><i class="fas fa-capsules"></i> Produk</a>
+        <a href="#contact"><i class="fas fa-phone"></i> Kontak</a>
+    </nav>
+    <section id="home">
+        <h2><i class="fas fa-info-circle"></i> Tentang Kami</h2>
+        <p>vivi farma adalah apotek modern yang menyediakan lebih dari 99+ obat-obatan, vitamin, suplemen, dan produk kesehatan berkualitas tinggi. Kami berkomitmen untuk memberikan pelayanan terbaik, harga terjangkau, dan konsultasi ahli untuk kesehatan Anda dan keluarga. Jelajahi katalog lengkap kami di bawah ini dengan fitur pencarian cepat!</p>
+    </section>
+    <section id="products">
+        <h2><i class="fas fa-list"></i> Katalog Produk Kami (99+ Obat)</h2>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Cari obat berdasarkan nama...">
+            <button onclick="searchProducts()"><i class="fas fa-search"></i> Cari</button>
+        </div>
+        <div class="products-grid" id="products-grid">
+            <!-- Produk akan di-generate oleh JavaScript -->
+        </div>
+    </section>
+    <section id="contact">
+        <h2><i class="fas fa-envelope"></i> Kontak Kami</h2>
+        <p><i class="fas fa-map-marker-alt"></i> Alamat: jl.bukit barisan kel pematang kapau 28289 pku</p>
+        <p><i class="fas fa-phone"></i> Telepon: +62 813-6541-1765</p>
+        <p><i class="fas fa-envelope"></i> Email: vivipekanbaru87@gmail.com</p>
+        <p><i class="fas fa-clock"></i> Jam Operasional: Senin - sabtu, 08:00 - 22:00</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 vivi farma. Semua Hak Dilindungi. | Dibuat dengan ❤️ untuk kesehatan Anda</p>
+        <i class="fab fa-facebook"></i><i class="fab fa-twitter"></i><i class="fab fa-instagram"></i><i class="fab fa-linkedin"></i>
+    </footer>
+    <script>
+        // Array data produk (100+ obat fiktif untuk demo - harga dan deskripsi umum, semua legal dan umum)
+        const products = [
+            { name: "Paracetamol", desc: "Obat penurun demam dan nyeri.", price: "Rp 5.000", img: "https://via.placeholder.com/300x200?text=Paracetamol" },
+            { name: "Vitamin C", desc: "Suplemen untuk meningkatkan daya tahan tubuh.", price: "Rp 10.000", img: "https://via.placeholder.com/300x200?text=Vitamin+C" },
+            { name: "Amoxicillin", desc: "Antibiotik untuk infeksi bakteri.", price: "Rp 15.000", img: "https://via.placeholder.com/300x200?text=Amoxicillin" },
+            { name: "Ibuprofen", desc: "Obat anti-inflamasi untuk nyeri dan peradangan.", price: "Rp 8.000", img: "https://via.placeholder.com/300x200?text=Ibuprofen" },
+            { name: "Multivitamin", desc: "Suplemen harian untuk nutrisi lengkap.", price: "Rp 20.000", img: "https://via.placeholder.com/300x200?text=Multivitamin" },
+            { name: "Antihistamin", desc: "Obat untuk alergi dan pilek.", price: "Rp 12.000", img: "https://via.placeholder.com/300x200?text=Antihistamin" },
+            { name: "Omega 3", desc: "Suplemen untuk kesehatan jantung dan otak.", price: "Rp 25.000", img: "https://via.placeholder.com/300x200?text=Omega+3" },
+            { name: "Cough Syrup", desc: "Sirup batuk untuk meringankan gejala flu.", price: "Rp 18.000", img: "https://via.placeholder.com/300x200?text=Cough+Syrup" },
+            { name: "Aspirin", desc: "Obat pengencer darah.", price: "Rp 7.000", img: "https://via.placeholder.com/300x200?text=Aspirin" },
+            { name: "Cetirizine", desc: "Antihistamin untuk alergi.", price: "Rp 9.000", img: "https://via.placeholder.com/300x200?text=Cetirizine" },
+            { name: "Loperamide", desc: "Obat diare.", price: "Rp 6.000", img: "https://via.placeholder.com/300x200?text=Loperamide" },
+            { name: "Omeprazole", desc: "Obat maag.", price: "Rp 14.000", img: "https://via.placeholder.com/300x200?text=Omeprazole" },
+            { name: "Simvastatin", desc: "Obat kolesterol.", price: "Rp 22.000", img: "https://via.placeholder.com/300x200?text=Simvastatin" },
+            { name: "Metformin", desc: "Obat diabetes.", price: "Rp 11.000", img: "https://via.placeholder.com/300x200?text=Metformin" },
+            { name: "Furosemide", desc: "Diuretik untuk tekanan darah.", price: "Rp 13.000", img: "https://via.placeholder.com/300x200?text=Furosemide" },
+            { name: "Prednisone", desc: "Steroid anti-inflamasi.", price: "Rp 16.000", img: "https://via.placeholder.com/300x200?text=Prednisone" },
+            { name: "Warfarin", desc: "Antikoagulan.", price: "Rp 19.000", img: "https://via.placeholder.com/300x200?text=Warfarin" },
+            { name: "Insulin", desc: "Obat diabetes injeksi.", price: "Rp 50.000", img: "https://via.placeholder.com/300x200?text=Insulin" },
+            { name: "Albuterol", desc: "Inhaler asma.", price: "Rp 30.000", img: "https://via.placeholder.com/300x200?text=Albuterol" },
+            {
